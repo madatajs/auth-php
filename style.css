@@ -1,0 +1,126 @@
+html {
+	height: 100%;
+	padding: 0.8em;
+	display: flex;
+	background: hsl(220 10% 50%);
+}
+
+body {
+	--padding: 0.8em 1.2em 2em;
+
+	box-sizing: border-box;
+	margin: auto;
+	padding: var(--padding);
+	border-radius: 0.5em;
+	background: hsl(0 0% 100% / 0.9);
+	box-shadow: 1px 1px 10px rgb(0 0 0 / 0.5);
+	font: var(--font-size-lh) Helvetica Neue, sans-serif;
+	text-align: center;
+}
+
+body:not(:has(footer)) {
+	padding-bottom: 1em;
+}
+
+h1 {
+	font-size: 130%;
+}
+
+h1 a {
+	display: block;
+}
+
+body img {
+	display: block;
+	margin: 0 auto;
+	height: 4em;
+	block-size: 4em;
+}
+
+a[href] {
+	word-break: break-all;
+}
+
+#backend_list {
+	list-style-type: none;
+
+	max-width: 80%;
+	padding: 0;
+	margin: 0.5em auto 2em;
+
+	display: grid;
+	gap: 0.5em;
+	grid-template-columns: repeat(auto-fit, minmax(4.5em, 1fr));
+}
+
+.backend {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2em;
+	justify-content: space-between;
+}
+
+.backend img {
+	display: block;
+	margin: 0 auto;
+	height: 3em;
+	aspect-ratio: 1;
+}
+
+#auth {
+	max-width: 60ch;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7em;
+}
+
+button {
+	flex: 1;
+	padding: 0.8em 0.5em;
+	border: none;
+	border-radius: 0.3em;
+	font: inherit;
+	font-weight: bold;
+	text-wrap: balance;
+	color: white;
+	cursor: pointer;
+	box-shadow: 0 0 hsl(0 0% 100% / 0.2) inset;
+	transition: 0.4s box-shadow;
+}
+
+button:hover {
+	box-shadow: 0 1em hsl(0 0% 100% / 0.2) inset;
+}
+
+button.yes {
+	background: hsl(85 80% 45%);
+}
+
+button.no {
+	background: hsl(0 80% 45%);
+}
+
+@media screen and (min-width: 425px) {
+	footer {
+		flex-direction: row;
+		gap: 1em;
+	}
+}
+
+@media screen and (min-width: 540px) {
+	body {
+		--padding: 1em 3em 2em;
+		--font-size-lh: 120%/1.2;
+
+		max-width: 85vw;
+	}
+}
+
+@media screen and (min-width: 685px) {
+	body {
+		--font-size-lh: 150%/1.5;
+	}
+}

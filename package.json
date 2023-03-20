@@ -1,0 +1,24 @@
+{
+  "name": "auth-php",
+  "version": "0.0.1",
+  "description": "Madata PHP Authentication Provider",
+  "main": "index.php",
+  "scripts": {
+    "build": "",
+    "init-repo": "git remote add template https://github.com/madatajs/auth-php.git",
+    "update-repo": "git fetch --all && git merge template/main --allow-unrelated-histories --no-edit && git push origin main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madatajs/auth-php.git"
+  },
+  "contributors": [
+    "Lea Verou <lea@verou.me> (https://lea.verou.me/)",
+    "Dmitry Sharabin <dmitrysharabin@gmail.com> (https://d12n.me/)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madatajs/auth-php/issues"
+  },
+  "homepage": "https://github.com/madatajs/auth-php#readme"
+}

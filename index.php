@@ -76,21 +76,17 @@
 		<section>
 			Supported backends
 			<ul id="backend_list">
-				<?php
-					if (!$backends) {
-						echo '<li>Fetching…</li>';
-					} else {
-						foreach ($backends as $name => $meta) {
-							$id = strtolower($name);
-
-							echo
-							  '<li class="' . $id . ' backend">' .
-							  '	<img src="' . ($meta['icon'] ?? 'img/default-logo.svg') . '" alt="' . $name . ' logo" />' .
-							  '	<a href="https://madata.dev/backends/' . $id . '">' . $name . '</a>' .
-							  '</li>';
-						}
-					}
-				?>
+				<?php if (!$backends): ?>
+					<li>Fetching…</li>
+				<?php else: ?>
+					<?php foreach ($backends as $name => $meta): ?>
+						<?php $id = strtolower($name) ?>
+						<li class="<?= $id ?> backend">
+							<img src="<?= $meta["icon"] ?? "img/default-logo.svg" ?>" alt="<?= $name ?> logo" />
+							<a href="https://madata.dev/backends/<?= $id ?>"><?= $name ?></a>
+						</li>
+					<?php endforeach; ?>
+				<?php endif; ?>
 			</ul>
 
 			<p>Want to learn more about Madata? Visit <a href="https://madata.dev">madata.dev</a>!</p>
